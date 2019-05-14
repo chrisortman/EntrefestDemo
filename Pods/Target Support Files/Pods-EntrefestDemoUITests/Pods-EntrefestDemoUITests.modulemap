@@ -1,0 +1,6 @@
+framework module Pods_EntrefestDemoUITests {
+  umbrella header "Pods-EntrefestDemoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

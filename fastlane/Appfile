@@ -1,0 +1,8 @@
+app_identifier("com.chrisortman.EntrefestDemo") # The bundle identifier of your app
+apple_id("chrisortman@gmail.com") # Your Apple email address
+
+itc_team_id("19724806") # App Store Connect Team ID
+team_id("3P5W46HP4G") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

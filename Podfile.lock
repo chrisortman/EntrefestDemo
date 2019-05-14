@@ -1,0 +1,46 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Eureka (5.0.0)
+  - Nimble (8.0.1)
+  - PKHUD (5.2.1)
+  - Quick (2.1.0)
+  - Realm (3.14.1):
+    - Realm/Headers (= 3.14.1)
+  - Realm/Headers (3.14.1)
+  - RealmSwift (3.14.1):
+    - Realm (= 3.14.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Eureka
+  - Nimble
+  - PKHUD (~> 5.0)
+  - Quick
+  - RealmSwift
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Eureka
+    - Nimble
+    - PKHUD
+    - Quick
+    - Realm
+    - RealmSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
+  RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 7dc3080454ad2acbd30848096c3dcb47090a9ef9
+
+COCOAPODS: 1.6.1
