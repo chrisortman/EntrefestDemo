@@ -17,6 +17,12 @@
 		8DA0CEF1227C5F5700CB70E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA0CEEF227C5F5700CB70E3 /* LaunchScreen.storyboard */; };
 		8DA0CEFC227C5F5700CB70E3 /* EntrefestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA0CEFB227C5F5700CB70E3 /* EntrefestDemoTests.swift */; };
 		8DA0CF07227C5F5700CB70E3 /* EntrefestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA0CF06227C5F5700CB70E3 /* EntrefestDemoUITests.swift */; };
+		8DBBA5FF228B8EF500266569 /* StartupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA5FE228B8EF500266569 /* StartupController.swift */; };
+		8DBBA602228B8F6600266569 /* DiscoveryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA601228B8F6600266569 /* DiscoveryRequest.swift */; };
+		8DBBA604228B9BB800266569 /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA603228B9BB800266569 /* ItemListController.swift */; };
+		8DBBA606228B9BF900266569 /* Realms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA605228B9BF900266569 /* Realms.swift */; };
+		8DBBA608228B9CFD00266569 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA607228B9CFD00266569 /* Models.swift */; };
+		8DBBA60A228B9E6F00266569 /* ItemFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBBA609228B9E6F00266569 /* ItemFormController.swift */; };
 		F5A610F55F8DD91C7F6F523E /* Pods_EntrefestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6641EA92A91DF50FEDE6CE /* Pods_EntrefestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,12 @@
 		8DA0CF02227C5F5700CB70E3 /* EntrefestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntrefestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA0CF06227C5F5700CB70E3 /* EntrefestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrefestDemoUITests.swift; sourceTree = "<group>"; };
 		8DA0CF08227C5F5700CB70E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DBBA5FE228B8EF500266569 /* StartupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupController.swift; sourceTree = "<group>"; };
+		8DBBA601228B8F6600266569 /* DiscoveryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryRequest.swift; sourceTree = "<group>"; };
+		8DBBA603228B9BB800266569 /* ItemListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListController.swift; sourceTree = "<group>"; };
+		8DBBA605228B9BF900266569 /* Realms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realms.swift; sourceTree = "<group>"; };
+		8DBBA607228B9CFD00266569 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		8DBBA609228B9E6F00266569 /* ItemFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFormController.swift; sourceTree = "<group>"; };
 		9F14240B2788DD31ED530152 /* Pods-EntrefestDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntrefestDemoTests.release.xcconfig"; path = "Target Support Files/Pods-EntrefestDemoTests/Pods-EntrefestDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A9253C3282159155E170EAE9 /* Pods-EntrefestDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntrefestDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-EntrefestDemoTests/Pods-EntrefestDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B058FBD35C2FA47702EA36A0 /* Pods-EntrefestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EntrefestDemo.debug.xcconfig"; path = "Target Support Files/Pods-EntrefestDemo/Pods-EntrefestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +123,6 @@
 				E99AA16BE410770A34ECE50C /* Pods-EntrefestDemoUITests.debug.xcconfig */,
 				BF70F5846ECC1F1C8C90468A /* Pods-EntrefestDemoUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,11 +151,17 @@
 		8DA0CEE5227C5F5500CB70E3 /* EntrefestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8DA0CEE6227C5F5500CB70E3 /* AppDelegate.swift */,
-				8DA0CEE8227C5F5500CB70E3 /* ViewController.swift */,
-				8DA0CEEA227C5F5500CB70E3 /* Main.storyboard */,
-				8DA0CEED227C5F5700CB70E3 /* Assets.xcassets */,
 				8DA0CEEF227C5F5700CB70E3 /* LaunchScreen.storyboard */,
+				8DA0CEEA227C5F5500CB70E3 /* Main.storyboard */,
+				8DBBA600228B8F5800266569 /* Server */,
+				8DBBA607228B9CFD00266569 /* Models.swift */,
+				8DBBA605228B9BF900266569 /* Realms.swift */,
+				8DA0CEE6227C5F5500CB70E3 /* AppDelegate.swift */,
+				8DBBA5FE228B8EF500266569 /* StartupController.swift */,
+				8DBBA603228B9BB800266569 /* ItemListController.swift */,
+				8DBBA609228B9E6F00266569 /* ItemFormController.swift */,
+				8DA0CEE8227C5F5500CB70E3 /* ViewController.swift */,
+				8DA0CEED227C5F5700CB70E3 /* Assets.xcassets */,
 				8DA0CEF2227C5F5700CB70E3 /* Info.plist */,
 				8D6046D02284C9370082D9CD /* MyTableViewController.swift */,
 			);
@@ -167,6 +184,14 @@
 				8DA0CF08227C5F5700CB70E3 /* Info.plist */,
 			);
 			path = EntrefestDemoUITests;
+			sourceTree = "<group>";
+		};
+		8DBBA600228B8F5800266569 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				8DBBA601228B8F6600266569 /* DiscoveryRequest.swift */,
+			);
+			path = Server;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,8 +455,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DBBA5FF228B8EF500266569 /* StartupController.swift in Sources */,
 				8DA0CEE9227C5F5500CB70E3 /* ViewController.swift in Sources */,
+				8DBBA60A228B9E6F00266569 /* ItemFormController.swift in Sources */,
+				8DBBA606228B9BF900266569 /* Realms.swift in Sources */,
+				8DBBA608228B9CFD00266569 /* Models.swift in Sources */,
 				8D6046D12284C9370082D9CD /* MyTableViewController.swift in Sources */,
+				8DBBA602228B8F6600266569 /* DiscoveryRequest.swift in Sources */,
+				8DBBA604228B9BB800266569 /* ItemListController.swift in Sources */,
 				8DA0CEE7227C5F5500CB70E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
