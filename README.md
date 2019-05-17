@@ -56,6 +56,12 @@ $Free
 # Other Links
 
 ## DesignCode
+
 Great set of video tutorials covering sketch, interface builder and swift
 
 [https://designcode.io]
+
+Awesome Swift, help find good libraries
+
+[https://github.com/matteocrippa/awesome-swift]
+
