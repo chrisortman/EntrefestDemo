@@ -22,10 +22,11 @@ private let realmStorageDir = Realm.Configuration.defaultConfiguration
 
 fileprivate let UserRealmConfiguration = Realm.Configuration(
     fileURL: realmStorageDir.appendingPathComponent("user.realm"),
-    schemaVersion: 8,
+    schemaVersion: 9,
     migrationBlock: { migration, oldSchemaVersion in
-        if (oldSchemaVersion < 2) {
+        if (oldSchemaVersion < 9) {
             // Changed UploadConfiguration to user UserDefaults
+            
         }
         
        

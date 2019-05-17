@@ -13,6 +13,7 @@ class Item : Object {
     @objc dynamic var id = UUID().uuidString
     @objc dynamic var text = ""
     @objc dynamic var createdAt = Date()
+    @objc dynamic var notCompletedAt: Date? = nil
     
     override static func primaryKey() -> String? {
         return "id"
@@ -20,5 +21,9 @@ class Item : Object {
     
     func updateFrom(itemForm values: [String: Any?]) {
         self.text = values["TextField"] as? String ?? ""
+    }
+    
+    func sayNo() {
+        self.notCompletedAt = Date()
     }
 }

@@ -65,11 +65,16 @@ class ItemListController : UITableViewController {
         
         let item = data[indexPath.row]
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemDisplay", for: indexPath) 
+        if item.notCompletedAt == nil {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemDisplay", for: indexPath)
+            cell.textLabel?.text = item.text
+            return cell
+        } else {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "NoDisplay", for: indexPath)
+            cell.textLabel?.text = item.text
+            return cell
+        }
         
-        cell.textLabel?.text = item.text
-        
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,7 +95,8 @@ class ItemListController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = self.contextualDeleteAction(forRowAtIndexPath: indexPath)
-        let config = UISwipeActionsConfiguration(actions: [deleteAction])
+        let noAction = self.contextualNoAction(forRowAtIndexPath: indexPath)
+        let config = UISwipeActionsConfiguration(actions: [noAction, deleteAction])
         return config
     }
     
@@ -106,9 +112,21 @@ class ItemListController : UITableViewController {
             completionHandler(true)
         }
         
-        
-        
         return action
     }
     
+    func contextualNoAction(forRowAtIndexPath indexPath : IndexPath) -> UIContextualAction {
+        let record = data[indexPath.row]
+        
+        let noAction = UIContextualAction(style: .normal, title: "No") { (contextAction: UIContextualAction, sourceView: UIView, completionHandler: (Bool) -> Void) in
+            
+            self.realm.beginWrite()
+            record.sayNo()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
+            try! self.realm.commitWrite(withoutNotifying: [self.notificationToken])
+            completionHandler(true)
+        }
+        
+        return noAction
+    }
 }
