@@ -22,6 +22,7 @@ class MyTableViewController : UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ViewController {
+            vc.message = "Hello World"
         }
     }
 }
