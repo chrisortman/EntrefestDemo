@@ -19,6 +19,7 @@ class ItemListController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setupData()
     }
     private func setupData() {
@@ -64,7 +65,7 @@ class ItemListController : UITableViewController {
         
         let item = data[indexPath.row]
         
-        var cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemDisplay", for: indexPath) as! UITableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "ItemDisplay", for: indexPath) 
         
         cell.textLabel?.text = item.text
         

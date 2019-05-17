@@ -22,12 +22,12 @@ class ItemFormController : FormViewController {
         super.viewDidLoad()
         
         form +++ Section()
-        <<< TextRow("TextField") {
-            $0.title = "Text"
-            $0.placeholder = "item text"
-            $0.value = self.existingItem?.text
-            $0.add(rule: RuleRequired(msg: "Text is required"))
-            $0.validationOptions = .validatesOnChangeAfterBlurred
+        <<< TextRow("TextField") { tr in
+            tr.title = "Text"
+            tr.placeholder = "item text"
+            tr.value = self.existingItem?.text
+            tr.add(rule: RuleRequired(msg: "Text is required"))
+            tr.validationOptions = .validatesOnChangeAfterBlurred
         }.cellUpdate { (cell,row) in
             if !row.isValid {
                 cell.titleLabel?.textColor = .red
@@ -44,8 +44,6 @@ class ItemFormController : FormViewController {
                 return
             }
             
-            HUD.show(.progress)
-            
             let realm = try! self.existingItem?.realm ?? Realm()
             realm.beginWrite()
             
@@ -58,13 +56,16 @@ class ItemFormController : FormViewController {
             }
             
             try! realm.commitWrite()
-        
-            HUD.flash(.success, delay: 1.0) { finished in
-                self.closeWithMode()
-            }
+            
+            
+             self.closeWithMode()
+//            self.giveSuccessFeedback()
+//            HUD.flash(.success, delay: 1.0) { finished in
+//               
+//            }
         }
     }
-    
+
     private func showValidationErrors(errors: [ValidationError]) {
         let messages = errors.map { $0.msg }.joined()
         

@@ -19,13 +19,13 @@ class StartupController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.startAnimating()
-        self.startDiscovery {
+        self.startDiscovery { succeeded in
             self.activityIndicator.stopAnimating()
             self.performSegue(withIdentifier: "Main", sender: self)
         }
     }
     
-    private func startDiscovery(success: @escaping () -> Void) {
+    private func startDiscovery(completion: @escaping (Bool) -> Void) {
         
         let request = Alamofire.request(DiscoveryRequest())
         print("Look, it will print the cURL command if you want to test it")
@@ -38,11 +38,12 @@ class StartupController : UIViewController {
                 if let parsed = DiscoveryResponse(from: json) {
                     DiscoveredSettings = parsed
                 }
-                success()
+                completion(true)
                 break
                 
             case let .failure(err):
                 print(err)
+                completion(false)
                 //We failed on discovery, hopefully we have enough settings to get us by
                 //we will deal with that in context specific ways, so ignore
             }
