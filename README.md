@@ -65,3 +65,6 @@ Awesome Swift, help find good libraries
 
 [https://github.com/matteocrippa/awesome-swift]
 
+Videos from the presentation
+
+[https://www.youtube.com/watch?v=1QmSdfjgmyY&list=PLh-4kuUILst3ToFgblS4u-Z08rF4uyZyd]
